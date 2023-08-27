@@ -14,24 +14,20 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CMSRequest {
-    private int id;
-
+    private int userId;
     @NotNull
     private String title;
 
     @NotNull
     private String content;
 
-    private User user;
-
     private List<CmsImageRequest> cmsImages;
 
     public CMS toCMSEntity() {
         CMS cms = new CMS();
-        cms.setId(this.id);
+        cms.setId(this.userId);
         cms.setTitle(this.title);
         cms.setContent(this.content);
-        cms.setUser(this.user);
         // Mapping CmsImageRequest to CmsImage entities
         List<CmsImage> cmsImageEntities = CmsImageRequest.toCmsImageEntities(this.cmsImages);
         cms.setCmsImages(cmsImageEntities);

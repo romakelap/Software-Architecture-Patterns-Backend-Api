@@ -1,6 +1,5 @@
-package GapiV2.Garlands.request;
+package GapiV2.Garlands.response;
 
-import GapiV2.Garlands.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,7 +10,9 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class EmployeeBillHistoryRequest {
+public class GetEmployeeBillHistoryResponse {
+    private int userId;
+    private int id;
     private String username;
     private String contactNumber;
     private String workingMethod;
@@ -19,5 +20,4 @@ public class EmployeeBillHistoryRequest {
     private List<LocalDate> workDate;
     private List<String> descEmployee;
     private List<Double> salary;
-    private Integer userId;
 }
