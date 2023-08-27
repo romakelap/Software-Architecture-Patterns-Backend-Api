@@ -15,10 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 public class CMSRequest {
     private int userId;
-    @NotNull
     private String title;
-
-    @NotNull
     private String content;
 
     private List<CmsImageRequest> cmsImages;
