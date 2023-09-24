@@ -65,7 +65,7 @@ public class AuthController {
 
 
 
-    // REGISTER VISITOR
+    // REGISTER VISITORr
     @PostMapping("/register/visitor")
     public ResponseEntity<String> register(@RequestBody RegisterRequest registerRequest) {
         if (userRepository.findByEmail(registerRequest.getEmail()) != null) {
