@@ -28,6 +28,10 @@ public class CMS {
     @Column(name = "content")
     private String content;
 
+    @NotNull
+    @Column(name = "location")
+    private String location;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
