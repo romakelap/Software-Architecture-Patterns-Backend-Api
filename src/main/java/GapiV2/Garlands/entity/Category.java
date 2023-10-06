@@ -27,6 +27,6 @@ public class Category {
 
 //    @OneToOne(mappedBy = "category", cascade = CascadeType.ALL)
 //    private Set<Post> posts;
-    @OneToMany(mappedBy = "category")
-    private List<Post> posts;
+//    @OneToMany(mappedBy = "category")
+//    private List<Post> posts;
 }
