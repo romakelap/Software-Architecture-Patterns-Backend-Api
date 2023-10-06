@@ -39,4 +39,11 @@ public class CMS {
     @OneToMany(mappedBy = "cms")
     private List<CmsImage> cmsImages;
 
+//    @OneToMany(mappedBy = "cms")
+//    private List<Template> templates;
+
+    @ManyToOne
+    @JoinColumn(name = "template_id")
+    private Template templates;
+
 }
