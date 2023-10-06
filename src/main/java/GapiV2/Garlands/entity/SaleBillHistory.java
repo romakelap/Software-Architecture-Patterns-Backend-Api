@@ -51,4 +51,10 @@ public class SaleBillHistory {
     @Column(name = "quantities")
     private List<Integer> quantities;
 
+
+//    STATUS
+    @ManyToOne
+    @JoinColumn(name = "status_id")
+    private StatusSaleBillHistory statusSaleBillHistory;
+
 }
