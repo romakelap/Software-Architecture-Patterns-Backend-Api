@@ -28,4 +28,7 @@ public class CmsImage {
     @ManyToOne
     @JoinColumn(name = "cms_id")
     private CMS cms;
+//    @OneToOne
+//    @JoinColumn(name = "template_id")
+//    private Template template;
 }
