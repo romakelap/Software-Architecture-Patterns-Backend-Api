@@ -24,6 +24,7 @@ public class EmployeeBillHistory {
     private String username;
     @Column(name = "contact_number")
     private String contactNumber;
+
     //Value : Harian / Bulanan
     @Column(name = "working_method")
     private String workingMethod;
