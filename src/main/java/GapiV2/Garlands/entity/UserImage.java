@@ -24,7 +24,7 @@ public class UserImage {
     @Column(name = "type")
     private String type;
 
-    @Column(name = "data", length = 2000)
+    @Column(name = "userdata",columnDefinition = "LONGBLOB")
     private byte[] data;
 
     @NotNull
