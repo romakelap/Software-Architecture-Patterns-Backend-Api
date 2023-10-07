@@ -23,6 +23,7 @@ public class UserDetail {
 
 //    private String profileImageURL;
 
-    @OneToOne(mappedBy = "userDetail")
+    @ManyToOne
+    @JoinColumn(name = "user_id")
     private User user;
 }
