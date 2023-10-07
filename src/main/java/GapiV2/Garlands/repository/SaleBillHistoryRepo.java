@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface SaleBillHistoryRepo extends JpaRepository<SaleBillHistory, Integer>  {
     List<SaleBillHistory> findAllSaleBillByUser_Id(int userId);
+    void deleteById(int id);
 }
