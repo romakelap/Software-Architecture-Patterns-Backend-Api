@@ -39,6 +39,11 @@ public class User {
     @NotNull
     @Column(name = "password")
     private String password;
+    private String address;
+    private String phoneNumber;
+    //    This for since when did you wake up the stand garden
+    private String dateOfBirth;
+    private String ownerName;
 
     //RELATIONSHIP============================================
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
@@ -63,16 +68,16 @@ public class User {
     @Column(name = "role") // Add this column to represent the user's role
     private Role role; // Add Role field to represent the user's role
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<SaleBillHistory>saleBillHistories;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Set<SaleBillHistory>saleBillHistories;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<EmployeeBillHistory>employeeBillHistories;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Set<EmployeeBillHistory>employeeBillHistories;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<CMS> cms;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Set<CMS> cms;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_detail_id")
-    private UserDetail userDetail;
+//    @OneToMany(mappedBy = "user")
+//    private List<Template> templates;
+
 }
