@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface EmployeeBillHistoryRepo extends JpaRepository<EmployeeBillHistory, Integer> {
     List<EmployeeBillHistory> findAllEmployeeBillByUser_Id(int userId);
+    void deleteById(int id);
 }
