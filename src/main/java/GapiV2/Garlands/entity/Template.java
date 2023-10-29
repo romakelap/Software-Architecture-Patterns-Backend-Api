@@ -17,13 +17,12 @@ public class Template {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
+    @Column(length = 100000)
     private String htmlContent;
+    @Column(length = 100000)
     private String cssContent;
+    @Column(length = 100000)
     private String jsContent;
-
-//    @ManyToOne
-//    @JoinColumn(name = "cms_id")
-//    private CMS cms;
 }
 
 
