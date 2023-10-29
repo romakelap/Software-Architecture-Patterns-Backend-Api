@@ -24,6 +24,10 @@ public class Post {
     @Column(name = "description")
     private String description;
 
+//    @NotNull
+    @Column(name = "location")
+    private String location;
+
     @NotNull
     @ManyToOne
     @JoinColumn(name = "user_id")
