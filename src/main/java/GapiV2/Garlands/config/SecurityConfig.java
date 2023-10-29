@@ -72,8 +72,8 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.GET, "/api/postimages/**").permitAll()
                 .requestMatchers("/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs").permitAll()
                 .requestMatchers("/api/users/**").permitAll()
-//                .requestMatchers("/api/posts/**").permitAll()
-//                .requestMatchers("/api/comments/**").permitAll()
+                .requestMatchers("/api/templates/**").permitAll()
+                .requestMatchers("/api/cms/get-by-id/**").permitAll()
 
 
                 .anyRequest().authenticated();
